@@ -5,15 +5,21 @@
 
     settings = {
       logo = {
-        type = "small";
+        type = "none";
       };
 
       modules = [
         "title"
+        "separator"
 
         {
           type = "os";
           format = "{name}";
+        }
+
+        {
+          type = "kernel";
+          key = "kernel";
         }
 
         "shell"
@@ -24,7 +30,17 @@
         }
 
         "terminal"
+
         "memory"
+        "swap"
+        {
+          type = "cpu";
+          format = "{name} ({cores-physical}/{cores-logical}) @ {freq-max}";
+        }
+        {
+          type = "disk";
+          format = "{name}: {size-used} / {size-total} - {size-percentage}";
+        }
       ];
     };
   };
