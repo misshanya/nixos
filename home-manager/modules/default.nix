@@ -8,5 +8,6 @@
     ./waybar.nix
     ./wofi
     ./alacritty.nix
+    ./fastfetch.nix
   ];
 }
