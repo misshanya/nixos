@@ -18,6 +18,12 @@
   # Use latest kernel (non lts)
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
+  boot.kernelParams = [
+    "zswap.enabled=1"
+    "zswap.compressor=zstd"
+    "zswap.zpool=z3fold"
+  ];
+
   # Create swapfile, size = 16GB
   swapDevices = [{
     device = "/var/lib/swapfile";
