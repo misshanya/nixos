@@ -26,6 +26,7 @@
  
 
       # Dev
+      golangci-lint
       
       # Code editors
       zed-editor
