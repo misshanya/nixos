@@ -62,6 +62,9 @@
       # File manager
       kdePackages.qtsvg
       kdePackages.dolphin
+
+      unzip
+      compsize
     ];
   };
 
