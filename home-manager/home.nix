@@ -20,7 +20,6 @@
       libnotify
       wl-clipboard
       gcc
-      nodejs_23
       ffmpeg
       joplin-desktop
       tmux
