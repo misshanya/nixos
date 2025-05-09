@@ -76,6 +76,12 @@
   # Hyprland
   programs.hyprland.enable = true;
 
+  # Browser
+  programs.firefox = {
+      enable = true;
+      package = pkgs.librewolf;
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -83,7 +89,6 @@
     wget
     git
     kitty # For default Hyprland configuration
-    pkgs.librewolf # Browser
     telegram-desktop
     hyprlock
     hyprshot
