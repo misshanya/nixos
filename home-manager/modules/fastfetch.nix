@@ -22,6 +22,8 @@
           key = "kernel";
         }
 
+        "uptime"
+
         "shell"
 
         {
