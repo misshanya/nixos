@@ -117,6 +117,7 @@
 
     smartmontools
     bat
+    lm_sensors
 
     podman-tui
     podman-compose
