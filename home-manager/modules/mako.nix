@@ -4,16 +4,16 @@
 
     settings = {
       font = "Sans 12";
-      backgroundColor = "#2E3440";
-      textColor = "#FFFFFF";
-      borderColor = "#4C566A";
-      borderSize = 2;
-      borderRadius = 10;
+      background-color = "#2E3440";
+      text-color = "#FFFFFF";
+      border-color = "#4C566A";
+      border-size = 2;
+      border-radius = 10;
       anchor = "bottom-left";
       width = 400;
       height = 100;
       padding = "10";
-      defaultTimeout = 5000;
+      default-timeout = 5000;
       layer = "overlay";
     };
   };
