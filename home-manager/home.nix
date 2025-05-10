@@ -27,6 +27,7 @@
 
       # Dev
       golangci-lint
+      nodejs_24
       
       # Code editors
       zed-editor
