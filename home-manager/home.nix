@@ -66,6 +66,8 @@
 
       unzip
       compsize
+
+      typst
     ];
   };
 
