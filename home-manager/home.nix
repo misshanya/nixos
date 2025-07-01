@@ -68,6 +68,8 @@
       compsize
 
       typst
+  
+      zip
     ];
   };
 
