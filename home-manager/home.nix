@@ -71,6 +71,8 @@
       typst
   
       zip
+
+      starship
     ];
   };
 
