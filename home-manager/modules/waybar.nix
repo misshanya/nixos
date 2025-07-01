@@ -10,7 +10,7 @@
         height = 30;
         spacing = 0;
 
-        margin = "10 10 0 10";
+        margin = "0 100 0 100";
 
         modules-left = [
           "clock"
@@ -167,7 +167,7 @@
         transition-property: background-color;
         transition-duration: 0.5s;
 
-        border-radius: 10px;
+        border-radius: 0 0 10px 10px;
       }
 
       #window {
