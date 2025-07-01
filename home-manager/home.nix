@@ -28,6 +28,7 @@
       # Dev
       golangci-lint
       nodejs_24
+      docker-slim
       
       # Code editors
       zed-editor
