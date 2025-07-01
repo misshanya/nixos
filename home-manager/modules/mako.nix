@@ -3,16 +3,16 @@
     enable = true;
 
     settings = {
-      font = "Sans 12";
-      background-color = "#2E3440";
-      text-color = "#FFFFFF";
-      border-color = "#4C566A";
-      border-size = 2;
+      font = "Inter 9";
+      background-color = "#26233a";
+      text-color = "#e0def4";
+      border-color = "#524f67";
+      border-size = 4;
       border-radius = 10;
-      anchor = "bottom-left";
-      width = 400;
-      height = 100;
-      padding = "10";
+      anchor = "top-left";
+      width = 300;
+      height = 150;
+      padding = "7";
       default-timeout = 5000;
       layer = "overlay";
     };
