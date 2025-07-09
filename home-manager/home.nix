@@ -37,6 +37,7 @@
       protobuf
       protoc-gen-go
       protoc-gen-go-grpc
+      buf
 
       nitch # fetch
       onefetch # git repo fetch
