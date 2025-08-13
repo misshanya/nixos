@@ -28,10 +28,10 @@
     "zswap.zpool=z3fold"
   ];
 
-  # Create swapfile, size = 16GB
+  # Create swapfile, size = 8GB
   swapDevices = [{
     device = "/var/lib/swapfile";
-    size = 16*1024;
+    size = 8*1024;
     randomEncryption.enable = true;
   }];
 
