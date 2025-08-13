@@ -27,8 +27,12 @@
 
       # Dev
       golangci-lint
-      nodejs_24
+      nodejs
       docker-slim
+      go-mockery
+      go-task
+      wakatime-cli
+      android-tools
       
       # Code editors
       zed-editor
@@ -55,7 +59,7 @@
       # For kubernetes tests :)
       minikube
       docker-machine-kvm2
-      kubectl
+      k3s
 
       # Remote desktop
       tigervnc
@@ -74,6 +78,11 @@
       zip
 
       starship
+      jq
+      mpv
+      wrk
+      yt-dlp
+      pulseaudio
     ];
   };
 
