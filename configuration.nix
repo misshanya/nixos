@@ -15,6 +15,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.plymouth.enable = true;
+
   # Use latest kernel (non lts)
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
