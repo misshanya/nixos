@@ -167,7 +167,7 @@
         transition-property: background-color;
         transition-duration: 0.5s;
 
-        border-radius: 0 0 10px 10px;
+        border-radius: 0 0 20px 20px;
       }
 
       #window {
