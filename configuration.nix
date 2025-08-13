@@ -114,6 +114,7 @@
     go
     python314
     vscodium
+    jdk23
 
     # Theming
     libsForQt5.qt5ct qt6ct
