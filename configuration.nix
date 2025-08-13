@@ -18,7 +18,7 @@
   boot.plymouth.enable = true;
 
   # Use latest kernel (non lts)
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   boot.kernelParams = [
     "zswap.enabled=1"
