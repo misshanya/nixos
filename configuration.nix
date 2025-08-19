@@ -217,6 +217,8 @@
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 22 22000 3000 ];
   networking.firewall.allowedUDPPorts = [ 22000 21027 ];
+
+  networking.firewall.trustedInterfaces = [ "tun0" ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
