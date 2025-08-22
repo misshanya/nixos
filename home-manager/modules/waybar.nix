@@ -13,6 +13,7 @@
         margin = "0 100 0 100";
 
         modules-left = [
+          "cava"
           "clock"
           "hyprland/window"
         ];
@@ -31,6 +32,13 @@
           "hyprland/language"
           "network"
         ];
+
+        "cava" = {
+          format-icons = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█" ];
+          bars = 14;
+          bar_delimiter = 0;
+          noise_reduction = 0.89;
+        };
 
         "clock" = {
           interval = 1;
@@ -199,9 +207,13 @@
         background-color: @overlay;
       }
 
+      #cava {
+        padding: 3px 10px;
+        margin: 3px 5px;
+      }
+
       #clock {
         background-color: transparent;
-        padding: 3px 10px;
         margin: 3px 5px;
         color: @text;
       }
