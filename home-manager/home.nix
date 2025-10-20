@@ -46,7 +46,7 @@
 
       nitch # fetch
       onefetch # git repo fetch
-      cargo
+      rustup
       insomnia # api testing
       goose # for db migrations
       sqlc # for generating type safe go code
