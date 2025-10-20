@@ -23,6 +23,7 @@
       ffmpeg
       joplin-desktop
       tmux
+      zoxide
  
 
       # Dev
