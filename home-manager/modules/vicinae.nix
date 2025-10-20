@@ -9,7 +9,7 @@
       rootSearch.searchFiles = false;
       window = {
         csd = true;
-        opacity = 0.95;
+        opacity = 0.55;
         rounding = 10;
       };
     };
