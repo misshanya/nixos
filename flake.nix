@@ -12,9 +12,11 @@
     stylix.url = "github:danth/stylix";
 
     alacritty-theme.url = "github:alexghr/alacritty-theme.nix";
+
+    vicinae.url = "github:vicinaehq/vicinae";
   };
 
-  outputs = { nixpkgs, home-manager, stylix, alacritty-theme, ... }:
+  outputs = { nixpkgs, home-manager, stylix, alacritty-theme, vicinae, ... }:
     let
       system = "x86_64-linux";
     in {
@@ -32,6 +34,7 @@
         ({ config, pkgs, ... }: {
           nixpkgs.overlays = [ alacritty-theme.overlays.default ];
         })
+        vicinae.homeManagerModules.default
         ./home-manager/home.nix
       ];
     };

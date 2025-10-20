@@ -9,5 +9,6 @@
     ./wofi
     ./alacritty.nix
     ./fastfetch.nix
+    ./vicinae.nix
   ];
 }
