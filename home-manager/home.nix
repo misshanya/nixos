@@ -86,6 +86,8 @@
       pulseaudio
 
       obs-studio
+
+      cryptsetup
     ];
   };
 
