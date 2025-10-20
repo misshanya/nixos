@@ -84,6 +84,8 @@
       wrk
       yt-dlp
       pulseaudio
+
+      obs-studio
     ];
   };
 
