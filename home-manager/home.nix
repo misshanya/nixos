@@ -21,7 +21,6 @@
       wl-clipboard
       gcc
       ffmpeg
-      joplin-desktop
       tmux
       zoxide
  

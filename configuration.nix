@@ -114,11 +114,10 @@
     go
     python314
     vscodium
-    jdk23
+    jdk25
 
     # Theming
-    libsForQt5.qt5ct qt6ct
-    libsForQt5.breeze-qt5 
+    libsForQt5.qt5ct qt6Packages.qt6ct
 
     smartmontools
     bat
