@@ -80,6 +80,25 @@
   # Hyprland
   programs.hyprland.enable = true;
 
+  services.xserver.enable = true;
+  services.displayManager.sddm = {
+    enable = false; # turn on to use sddm
+    theme = "sddm-astronaut-theme";
+    extraPackages = with pkgs.qt6; [
+      qtwayland
+      qtmultimedia
+      qtsvg
+    ];
+  };
+
+  services.displayManager.gdm.enable = true;
+  
+  # enable gnome and disable some gnome's apps
+  services.desktopManager.gnome.enable = true;
+  services.gnome.games.enable = false;
+  environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs ];
+  services.power-profiles-daemon.enable = false;
+
   # Browser
   programs.firefox = {
       enable = true;
@@ -127,6 +146,10 @@
     podman-compose
 
     memtester # test RAM errors
+
+    sddm-astronaut
+
+    gnome-tweaks
   ];
 
   # If want to use proxy to download nix packages
