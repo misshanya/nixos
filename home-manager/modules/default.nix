@@ -9,6 +9,6 @@
     ./wofi
     ./alacritty.nix
     ./fastfetch.nix
-    ./vicinae.nix
+    ./caelestia.nix
   ];
 }

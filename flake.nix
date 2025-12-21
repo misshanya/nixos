@@ -14,9 +14,14 @@
     alacritty-theme.url = "github:alexghr/alacritty-theme.nix";
 
     vicinae.url = "github:vicinaehq/vicinae";
+
+    caelestia-shell = {
+      url = "github:caelestia-dots/shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, stylix, alacritty-theme, vicinae, ... }:
+  outputs = { nixpkgs, home-manager, stylix, alacritty-theme, vicinae, caelestia-shell, ... }:
     let
       system = "x86_64-linux";
     in {
@@ -35,6 +40,7 @@
           nixpkgs.overlays = [ alacritty-theme.overlays.default ];
         })
         vicinae.homeManagerModules.default
+        caelestia-shell.homeManagerModules.default
         ./home-manager/home.nix
       ];
     };
