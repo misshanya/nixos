@@ -189,8 +189,21 @@
     configDir = "/home/mishanya/Documents/.config/syncthing";   # Folder for Syncthing's settings and keys
   };
 
-  # TLP to save power on laptop
-  services.tlp.enable = true;
+  # Power management
+  services.auto-cpufreq = {
+    enable = true;
+    settings = {
+      battery = {
+        governor = "schedutil";
+        turbo = "never";
+      };
+      charger = {
+        governor = "performance";
+        turbo = "auto";
+      };
+    };
+  };
+  powerManagement.powertop.enable = true;
 
   # Bluetooth
   hardware.bluetooth.enable = true;
