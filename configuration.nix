@@ -150,6 +150,35 @@
     sddm-astronaut
 
     gnome-tweaks
+
+    (writeShellScriptBin "hypr-eco-mode" ''
+      #!/usr/bin/env bash
+      HYPR_ANIM=$(hyprctl getoption animations:enabled | grep 'int: 1')
+
+      if [ -n "$HYPR_ANIM" ]; then
+        hyprctl --batch "\
+          keyword animations:enabled 0;\
+          keyword decoration:blur:enabled 0;\
+          keyword decoration:shadow:enabled 0;\
+          keyword decoration:active_opacity 1;\
+          keyword decoration:inactive_opacity 1;\
+          keyword general:border_size 1;\
+          keyword decoration:rounding 0"
+        
+        notify-send -u low -t 2000 "Hyprland" "Eco Mode: ON 🔋"
+      else
+        hyprctl --batch "\
+          keyword animations:enabled 1;\
+          keyword decoration:blur:enabled 1;\
+          keyword decoration:shadow:enabled 1;\
+          keyword decoration:active_opacity 0.93;\
+          keyword decoration:inactive_opacity 0.85;\
+          keyword general:border_size 2;\
+          keyword decoration:rounding 10"
+          
+        notify-send -u low -t 2000 "Hyprland" "Eco Mode: OFF ✨"
+      fi
+    '')
   ];
 
   # If want to use proxy to download nix packages
