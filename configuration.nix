@@ -70,7 +70,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.mishanya = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "libvirtd" "docker" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "libvirtd" "docker" "uinput" ];
     packages = with pkgs; [
       tree
     ];
@@ -267,6 +267,13 @@
   };
 
   programs.virt-manager.enable = true;
+
+  hardware.uinput.enable = true;
+  services.sunshine = {
+    enable = true;
+    capSysAdmin = true;
+    openFirewall = true;
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
