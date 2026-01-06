@@ -33,6 +33,7 @@
       go-task
       wakatime-cli
       android-tools
+      bun
       air
       nixfmt
 
