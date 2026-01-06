@@ -1,10 +1,13 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   programs.caelestia = {
     enable = true;
     systemd.enable = true;
-    
+
     settings = {
       paths.wallpaperDir = "~/wallpapers/new";
+      scheme = "rosepine";
+      flavour = "main";
 
       general = {
         bar = {

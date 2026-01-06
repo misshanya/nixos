@@ -1,7 +1,7 @@
 {
   qt = {
     enable = true;
-    platformTheme.name = "kvantum";
-    style.name = "kvantum";
   };
+
+  stylix.targets.qt.enable = true;
 }

@@ -26,6 +26,7 @@
     enable = true;
     enableZshIntegration = true;
   };
+  stylix.targets.starship.enable = true;
 
   programs.zoxide = {
     enable = true;

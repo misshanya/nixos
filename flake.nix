@@ -21,28 +21,42 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, stylix, alacritty-theme, vicinae, caelestia-shell, ... }:
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      stylix,
+      alacritty-theme,
+      vicinae,
+      caelestia-shell,
+      ...
+    }:
     let
       system = "x86_64-linux";
-    in {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      inherit system;
-      modules = [
-        stylix.nixosModules.stylix
-        ./configuration.nix
-      ];
-    };
+    in
+    {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          stylix.nixosModules.stylix
+          ./configuration.nix
+        ];
+      };
 
-    homeConfigurations.mishanya = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.${system};
-      modules = [
-        ({ config, pkgs, ... }: {
-          nixpkgs.overlays = [ alacritty-theme.overlays.default ];
-        })
-        vicinae.homeManagerModules.default
-        caelestia-shell.homeManagerModules.default
-        ./home-manager/home.nix
-      ];
+      homeConfigurations.mishanya = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system};
+        modules = [
+          (
+            { config, pkgs, ... }:
+            {
+              nixpkgs.overlays = [ alacritty-theme.overlays.default ];
+            }
+          )
+          stylix.homeModules.stylix
+          vicinae.homeManagerModules.default
+          caelestia-shell.homeManagerModules.default
+          ./home-manager/home.nix
+        ];
+      };
     };
-  };
 }

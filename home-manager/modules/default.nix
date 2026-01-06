@@ -1,5 +1,6 @@
 {
   imports = [
+    ./stylix.nix
     ./cliphist.nix
     ./git.nix
     ./gtk.nix
