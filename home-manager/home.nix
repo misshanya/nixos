@@ -33,6 +33,7 @@
       go-task
       wakatime-cli
       android-tools
+      air
       
       # Code editors
       zed-editor
