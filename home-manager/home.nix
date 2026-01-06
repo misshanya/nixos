@@ -79,7 +79,6 @@
 
       zip
 
-      starship
       jq
       mpv
       wrk

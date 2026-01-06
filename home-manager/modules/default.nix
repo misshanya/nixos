@@ -4,6 +4,7 @@
     ./git.nix
     ./gtk.nix
     ./qt.nix
+    ./zsh.nix
     ./mako.nix
     ./wofi
     ./alacritty.nix
