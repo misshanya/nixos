@@ -3,8 +3,16 @@
 {
   stylix = {
     enable = true;
+
     base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
+    cursor = {
+      name = "Bibata-Modern-Ice";
+      package = pkgs.bibata-cursors;
+      size = 24;
+    };
+
     polarity = "dark";
+
     fonts = {
       serif = {
         package = pkgs.liberation_ttf;
@@ -26,6 +34,7 @@
         terminal = 12;
       };
     };
+
     autoEnable = true;
   };
 }
