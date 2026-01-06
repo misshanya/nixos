@@ -1,6 +1,14 @@
 { pkgs, ... }:
 
 {
+  boot.initrd.availableKernelModules = [
+    "nvme"
+    "xhci_pci"
+    "usb_storage"
+    "sd_mod"
+  ];
+  boot.kernelModules = [ "kvm-amd" ];
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 

@@ -7,5 +7,6 @@
     ./hyprland.nix
     ./kdeconnect.nix
     ./virt-manager.nix
+    ./stylix.nix
   ];
 }
