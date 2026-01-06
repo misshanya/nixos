@@ -11,5 +11,6 @@
     ./alacritty.nix
     ./fastfetch.nix
     ./dms.nix
+    ./vicinae.nix
   ];
 }
