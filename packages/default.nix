@@ -24,6 +24,7 @@
     btop
     killall
     lsd
+    nh # nix helper
 
     catppuccin-cursors.macchiatoLavender
     libsForQt5.qt5ct
