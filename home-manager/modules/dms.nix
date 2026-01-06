@@ -1,0 +1,15 @@
+{ ... }:
+
+{
+  programs.dankMaterialShell = {
+    enable = true;
+
+    systemd = {
+      enable = true;
+      restartIfChanged = true;
+    };
+
+    enableSystemMonitoring = true;
+    enableClipboard = true;
+  };
+}

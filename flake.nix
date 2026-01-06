@@ -15,8 +15,8 @@
 
     vicinae.url = "github:vicinaehq/vicinae";
 
-    caelestia-shell = {
-      url = "github:caelestia-dots/shell";
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -28,7 +28,7 @@
       stylix,
       alacritty-theme,
       vicinae,
-      caelestia-shell,
+      dms,
       ...
     }:
     let
@@ -54,7 +54,7 @@
           )
           stylix.homeModules.stylix
           vicinae.homeManagerModules.default
-          caelestia-shell.homeManagerModules.default
+          dms.homeModules.dankMaterialShell.default
           ./home-manager/home.nix
         ];
       };

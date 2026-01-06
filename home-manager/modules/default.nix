@@ -10,6 +10,6 @@
     ./wofi
     ./alacritty.nix
     ./fastfetch.nix
-    ./caelestia.nix
+    ./dms.nix
   ];
 }
