@@ -12,5 +12,6 @@
     ./ssh.nix
     ./dns.nix
     ./sunshine.nix
+    ./snapper.nix
   ];
 }
