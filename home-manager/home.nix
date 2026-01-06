@@ -34,7 +34,8 @@
       wakatime-cli
       android-tools
       air
-      
+      nixfmt
+
       # Code editors
       zed-editor
 
