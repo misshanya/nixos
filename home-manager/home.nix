@@ -89,6 +89,8 @@
       obs-studio
 
       cryptsetup
+
+      transmission_4-gtk
     ];
   };
 
