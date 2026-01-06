@@ -23,7 +23,6 @@
       ffmpeg
       tmux
       zoxide
- 
 
       # Dev
       golangci-lint
@@ -58,7 +57,7 @@
       jetbrains-toolbox
 
       libreoffice-qt6-fresh # Libreoffice
-      
+
       # For kubernetes tests :)
       minikube
       docker-machine-kvm2
@@ -77,7 +76,7 @@
       compsize
 
       typst
-  
+
       zip
 
       starship
