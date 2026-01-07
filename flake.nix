@@ -14,6 +14,10 @@
     alacritty-theme.url = "github:alexghr/alacritty-theme.nix";
 
     vicinae.url = "github:vicinaehq/vicinae";
+    vicinae-extensions = {
+      url = "github:vicinaehq/extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     dms = {
       url = "github:AvengeMedia/DankMaterialShell/stable";
@@ -28,9 +32,10 @@
       stylix,
       alacritty-theme,
       vicinae,
+      vicinae-extensions,
       dms,
       ...
-    }:
+    }@inputs:
     let
       system = "x86_64-linux";
     in
@@ -45,6 +50,8 @@
 
       homeConfigurations.mishanya = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
+        extraSpecialArgs = { inherit inputs; };
+
         modules = [
           (
             { config, pkgs, ... }:

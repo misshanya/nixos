@@ -1,5 +1,9 @@
-{ ... }:
+{ inputs, pkgs, ... }:
 
+let
+  system = pkgs.stdenv.hostPlatform.system;
+  vicinae-pkgs = inputs.vicinae-extensions.packages.${system};
+in
 {
   services.vicinae = {
     enable = true;
@@ -25,5 +29,9 @@
         name = "rose-pine";
       };
     };
+
+    extensions = with vicinae-pkgs; [
+      nix
+    ];
   };
 }
