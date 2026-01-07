@@ -11,8 +11,6 @@
 
     stylix.url = "github:danth/stylix";
 
-    alacritty-theme.url = "github:alexghr/alacritty-theme.nix";
-
     vicinae.url = "github:vicinaehq/vicinae";
     vicinae-extensions = {
       url = "github:vicinaehq/extensions";
@@ -30,7 +28,6 @@
       nixpkgs,
       home-manager,
       stylix,
-      alacritty-theme,
       vicinae,
       vicinae-extensions,
       dms,
@@ -53,12 +50,6 @@
         extraSpecialArgs = { inherit inputs; };
 
         modules = [
-          (
-            { config, pkgs, ... }:
-            {
-              nixpkgs.overlays = [ alacritty-theme.overlays.default ];
-            }
-          )
           stylix.homeModules.stylix
           vicinae.homeManagerModules.default
           dms.homeModules.dankMaterialShell.default
