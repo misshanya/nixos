@@ -41,7 +41,7 @@
         inherit system;
         modules = [
           stylix.nixosModules.stylix
-          ./configuration.nix
+          ./hosts/laptop
         ];
       };
 

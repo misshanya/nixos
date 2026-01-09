@@ -1,10 +1,6 @@
 { ... }:
 
 {
-  imports = [
-    ./filesystems.nix
-  ];
-
   swapDevices = [
     {
       device = "/var/lib/swapfile";
