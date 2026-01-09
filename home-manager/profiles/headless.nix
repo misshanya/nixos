@@ -20,6 +20,8 @@
     gzip
     gnutar
     neovim
+
+    bat
   ];
 
   programs.home-manager.enable = true;
