@@ -12,6 +12,7 @@
       cd = "z";
       ls = "lsd";
       dc = "docker compose";
+      pc = "podman compose";
       up = "docker compose up -d";
       upb = "docker compose up -d --build";
     };
