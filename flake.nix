@@ -23,6 +23,18 @@
     };
   };
 
+  nixConfig = {
+    extra-substituters = [
+      "https://vicinae.cachix.org"
+      "https://nix-community.cachix.org"
+    ];
+    
+    extra-trusted-public-keys = [
+      "vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc="
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    ];
+  };
+
   outputs =
     {
       nixpkgs,
@@ -63,6 +75,16 @@
         modules = [
           stylix.homeModules.stylix
           ./home-manager/profiles/headless.nix
+        ];
+      };
+
+      homeConfigurations.homepc = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system};
+        extraSpecialArgs = { inherit inputs; };
+
+        modules = [
+          vicinae.homeManagerModules.default
+          ./home-manager/profiles/homepc.nix
         ];
       };
     };
