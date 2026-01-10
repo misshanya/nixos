@@ -5,6 +5,7 @@
 
   imports = [
     ./hardware-configuration.nix
+    ./disks.nix
     ./swap.nix
     ../../system
     ../../services
