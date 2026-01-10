@@ -13,5 +13,6 @@
     ./dns.nix
     ./sunshine.nix
     ./snapper.nix
+    ./earlyoom.nix
   ];
 }
