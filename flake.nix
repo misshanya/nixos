@@ -83,6 +83,7 @@
         extraSpecialArgs = { inherit inputs; };
 
         modules = [
+          stylix.homeModules.stylix
           vicinae.homeManagerModules.default
           ./home-manager/profiles/homepc.nix
         ];
