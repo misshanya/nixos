@@ -13,6 +13,7 @@
   home.packages = with pkgs; [
     bat
     vscodium
+    qwen-code
   ];
 
   services.vicinae.settings.launcher_window.opacity = 1;
