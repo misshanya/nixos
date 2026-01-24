@@ -7,6 +7,7 @@
     ./hardware-configuration.nix
     ./disks.nix
     ./swap.nix
+    ./boot.nix
     ../../system
     ../../services
     ../../packages
