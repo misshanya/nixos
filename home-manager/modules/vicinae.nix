@@ -24,10 +24,6 @@ in
         csd = true;
         rounding = 5;
       };
-
-      theme.dark = {
-        name = "rose-pine";
-      };
     };
 
     extensions = with vicinae-pkgs; [

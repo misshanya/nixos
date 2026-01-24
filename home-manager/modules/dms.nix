@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  programs.dankMaterialShell = {
+  programs.dank-material-shell = {
     enable = true;
 
     systemd = {
@@ -10,6 +10,5 @@
     };
 
     enableSystemMonitoring = true;
-    enableClipboard = true;
   };
 }
