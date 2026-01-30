@@ -17,6 +17,7 @@ in
     bat
     vscodium
     nodejs
+    rustup
   ];
 
   home.sessionVariables.PATH = "${config.home.homeDirectory}/.npm-global/bin:$PATH";
