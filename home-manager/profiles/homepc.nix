@@ -18,6 +18,7 @@ in
     vscodium
     nodejs
     rustup
+    scrcpy
   ];
 
   home.sessionVariables.PATH = "${config.home.homeDirectory}/.npm-global/bin:$PATH";
