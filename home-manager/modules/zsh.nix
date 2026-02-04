@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
   programs.zsh = {
@@ -19,28 +19,11 @@
 
     history = {
       size = 100000;
-      path = "${config.xdg.dataHome}/zsh/history";
+      path = "${config.xdg.dataHome}/shell/history";
     };
   };
 
-  programs.starship = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-  stylix.targets.starship.enable = true;
-
-  programs.zoxide = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
-  programs.direnv = {
-    enable = true;
-    enableZshIntegration = true;
-    nix-direnv.enable = true;
-  };
-
-  home.packages = [
-    pkgs.lsd
-  ];
+  programs.starship.enableZshIntegration = true;
+  programs.direnv.enableZshIntegration = true;
+  programs.zoxide.enableZshIntegration = true;
 }
