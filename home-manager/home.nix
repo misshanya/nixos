@@ -58,9 +58,6 @@
 
       libreoffice-qt6-fresh # Libreoffice
 
-      # For kubernetes tests :)
-      minikube
-      docker-machine-kvm2
       k3s
 
       # Remote desktop
