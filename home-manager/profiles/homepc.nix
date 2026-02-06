@@ -5,7 +5,7 @@ let
 in
 {
   imports = [
-    ../modules/zsh.nix
+    ../modules/shell.nix
     ../modules/vicinae.nix
   ];
 
