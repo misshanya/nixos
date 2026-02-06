@@ -19,6 +19,7 @@ in
     nodejs
     rustup
     scrcpy
+    grpcurl
   ];
 
   home.sessionVariables.PATH = "${config.home.homeDirectory}/.npm-global/bin:$PATH";
