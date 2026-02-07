@@ -25,6 +25,7 @@ in
   home.sessionVariables.PATH = "${config.home.homeDirectory}/.npm-global/bin:$PATH";
 
   services.vicinae.settings.launcher_window.opacity = 1;
+  services.vicinae.settings.theme.dark.name = "rose-pine";
 
   news.display = "silent";
   programs.home-manager.enable = true;
