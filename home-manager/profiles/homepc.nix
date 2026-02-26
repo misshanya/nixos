@@ -23,6 +23,7 @@ in
   ];
 
   home.sessionVariables.PATH = "${config.home.homeDirectory}/.npm-global/bin:$PATH";
+  home.sessionVariables.KUBECONFIG = "${config.home.homeDirectory}/.kube/config";
 
   services.vicinae.settings.launcher_window.opacity = 1;
   services.vicinae.settings.theme.dark.name = "rose-pine";
