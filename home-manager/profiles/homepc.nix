@@ -7,6 +7,7 @@ in
   imports = [
     ../modules/shell.nix
     ../modules/vicinae.nix
+    ../modules/helix.nix
   ];
 
   home.username = "mishanya";

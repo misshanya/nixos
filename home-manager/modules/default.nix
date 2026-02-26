@@ -12,5 +12,6 @@
     ./fastfetch.nix
     ./dms.nix
     ./vicinae.nix
+    ./helix.nix
   ];
 }
