@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.helix = {
     enable = true;
     settings = {
@@ -34,5 +35,5 @@
       gopls
     ];
   };
+  stylix.targets.helix.enable = false;
 }
-
