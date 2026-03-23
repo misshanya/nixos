@@ -83,6 +83,8 @@
       cryptsetup
 
       transmission_4-gtk
+
+      opencode
     ];
   };
 
