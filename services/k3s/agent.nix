@@ -1,6 +1,6 @@
 {
   services.k3s = {
-    enable = true;
+    enable = false;
     role = "agent";
     tokenFile = "/etc/nixos/secrets/k3s-token";
     serverAddr = "https://pc.home:6443";
