@@ -19,6 +19,9 @@
       animationSpeed = lib.mkForce 2;
       showWorkspaceIndex = lib.mkForce true;
 
+      showSeconds = lib.mkForce true;
+      osdAlwaysShowValue = lib.mkForce true;
+
       controlCenterWidgets = lib.mkForce [
         {
           id = "volumeSlider";
