@@ -8,5 +8,6 @@
     ./kdeconnect.nix
     ./virt-manager.nix
     ./stylix.nix
+    ./nettools.nix
   ];
 }

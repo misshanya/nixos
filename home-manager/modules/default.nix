@@ -13,5 +13,6 @@
     ./dms.nix
     ./vicinae.nix
     ./helix.nix
+    ./nettools.nix
   ];
 }

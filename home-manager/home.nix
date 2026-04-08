@@ -85,8 +85,6 @@
       transmission_4-gtk
 
       opencode
-
-      tcpdump
     ];
   };
 
