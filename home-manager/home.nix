@@ -85,6 +85,9 @@
       transmission_4-gtk
 
       opencode
+
+      pciutils
+      usbutils
     ];
   };
 
