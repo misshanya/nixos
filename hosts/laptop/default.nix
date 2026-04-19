@@ -8,6 +8,7 @@
     ./disks.nix
     ./swap.nix
     ./boot.nix
+    ./nix.nix
     ../../system
     ../../services
     ../../packages
