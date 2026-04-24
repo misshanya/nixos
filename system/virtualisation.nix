@@ -12,6 +12,12 @@
     docker = {
       enable = true;
       storageDriver = "btrfs";
+      daemon.settings = {
+        dns = [
+          "1.1.1.1"
+          "8.8.8.8"
+        ];
+      };
     };
 
     libvirtd = {
