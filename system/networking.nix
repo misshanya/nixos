@@ -3,20 +3,25 @@
 {
   networking.networkmanager.enable = true;
 
-  networking.firewall.allowedTCPPorts = [
-    22
-    22000
-    3000
-    5173
-    9001
-    9100
-    10250
-  ];
-  networking.firewall.allowedUDPPorts = [
-    22000
-    21027
-    5173
-    8472
-  ];
-  networking.firewall.trustedInterfaces = [ "tun0" ];
+  networking.firewall = {
+    enable = true;
+
+    interfaces.wlp2s0 = {
+      allowedTCPPorts = [
+        22
+        3000
+        3001
+        5173
+        22000
+      ];
+      allowedUDPPorts = [
+        3000
+        3001
+        5173
+        22000
+      ];
+    };
+
+    trustedInterfaces = [ "tun0" ];
+  };
 }

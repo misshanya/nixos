@@ -15,5 +15,6 @@
     ./snapper.nix
     ./earlyoom.nix
     ./k3s/agent.nix # for laptop only
+    ./yggdrasil.nix
   ];
 }
