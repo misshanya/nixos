@@ -1,18 +1,22 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
-  services.auto-cpufreq = {
+  services.tlp = {
     enable = true;
     settings = {
-      battery = {
-        governor = "schedutil";
-        turbo = "auto";
-      };
-      charger = {
-        governor = "performance";
-        turbo = "auto";
-      };
+      CPU_SCALING_GOVERNOR_ON_AC = "schedutil";
+      CPU_SCALING_GOVERNOR_ON_BAT = "schedutil";
+
+      CPU_SCALING_MIN_FREQ_ON_AC = 1400000;
+      CPU_SCALING_MAX_FREQ_ON_AC = 4000000;
+
+      CPU_SCALING_MIN_FREQ_ON_BAT = 1400000;
+      CPU_SCALING_MAX_FREQ_ON_BAT = 2300000;
+
+      CPU_BOOST_ON_AC = 1;
+      CPU_BOOST_ON_BAT = 0;
     };
   };
-  powerManagement.powertop.enable = true;
+
+  services.auto-cpufreq.enable = false;
 }
