@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   imports = [
@@ -88,6 +93,8 @@
 
       pciutils
       usbutils
+
+      inputs.helium.packages.${pkgs.system}.default
     ];
   };
 
