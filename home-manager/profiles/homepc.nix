@@ -6,7 +6,6 @@ in
 {
   imports = [
     ../modules/shell.nix
-    ../modules/vicinae.nix
     ../modules/helix.nix
   ];
 
@@ -18,6 +17,7 @@ in
     bat
     vscodium
     nodejs
+    bun
     rustup
     scrcpy
     grpcurl
