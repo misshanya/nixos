@@ -96,6 +96,7 @@
 
       inputs.helium.packages.${pkgs.system}.default
       inputs.spotatui.packages.${pkgs.system}.default
+      spotify-player
     ];
   };
 
