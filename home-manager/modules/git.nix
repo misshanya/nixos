@@ -4,5 +4,7 @@
     settings.user.name = "misshanya";
     settings.user.email = "mishanyadev@gmail.com";
     settings.core.editor = "nvim";
+
+    signing.format = null;
   };
 }

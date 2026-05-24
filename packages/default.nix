@@ -18,7 +18,7 @@
     hypridle
     hyprsunset
     brightnessctl
-    swww
+    awww
     yazi
     htop
     btop

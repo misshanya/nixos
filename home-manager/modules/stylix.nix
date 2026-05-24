@@ -5,5 +5,5 @@
     ../../modules/stylix.nix
   ];
 
-  stylix.opacity.terminal = 0.65;
+  stylix.opacity.terminal = 1.00;
 }
