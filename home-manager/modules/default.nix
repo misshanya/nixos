@@ -14,5 +14,7 @@
     ./vicinae.nix
     ./helix.nix
     ./nettools.nix
+
+    ./editors/zed.nix
   ];
 }

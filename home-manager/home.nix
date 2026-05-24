@@ -41,9 +41,6 @@
       air
       nixfmt
 
-      # Code editors
-      zed-editor
-
       # GRPC
       protobuf
       protoc-gen-go
