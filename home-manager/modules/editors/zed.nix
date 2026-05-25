@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.zed-editor = {
     enable = true;
@@ -15,4 +15,9 @@
       vim_mode = true;
     };
   };
+
+  home.packages = with pkgs; [
+    nil
+    nixd
+  ];
 }
