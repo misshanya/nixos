@@ -5,5 +5,6 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.caskaydia-cove
     inter
+    maple-mono.NF-unhinted
   ];
 }
