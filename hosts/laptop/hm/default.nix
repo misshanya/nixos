@@ -24,6 +24,7 @@
       terminals.alacritty.enable = true;
 
       spotify-tui.enable = true;
+      qbittorrent.enable = true;
     };
 
     graphics = {
