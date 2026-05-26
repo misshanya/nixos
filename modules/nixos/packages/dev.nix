@@ -17,5 +17,6 @@ in
       python314
       jdk25
     ];
+    programs.nix-ld.enable = true;
   };
 }
