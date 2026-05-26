@@ -59,15 +59,15 @@
       system = "x86_64-linux";
     in
     {
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
           stylix.nixosModules.stylix
-          ./hosts/laptop
+          ./hosts/laptop/system
         ];
       };
 
-      homeConfigurations.mishanya = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."mishanya@laptop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         extraSpecialArgs = { inherit inputs; };
 
@@ -75,16 +75,16 @@
           stylix.homeModules.stylix
           vicinae.homeManagerModules.default
           dms.homeModules.dank-material-shell
-          ./home-manager/home.nix
+          ./hosts/laptop/hm
         ];
       };
 
-      homeConfigurations."server" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.server = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
 
         modules = [
           stylix.homeModules.stylix
-          ./home-manager/profiles/headless.nix
+          ./hosts/headless/hm
         ];
       };
 
@@ -95,7 +95,7 @@
         modules = [
           stylix.homeModules.stylix
           vicinae.homeManagerModules.default
-          ./home-manager/profiles/homepc.nix
+          ./hosts/homepc/hm
         ];
       };
     };
