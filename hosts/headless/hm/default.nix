@@ -3,7 +3,6 @@
 {
   imports = [
     ../../../modules
-    ../../../modules
   ];
 
   home.username = "mishanya";
