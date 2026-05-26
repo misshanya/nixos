@@ -13,5 +13,6 @@
     lsd
     nh
     bat
+    ripgrep
   ];
 }
