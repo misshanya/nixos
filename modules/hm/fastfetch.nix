@@ -22,10 +22,7 @@ in
             type = "os";
             format = "{name}";
           }
-          {
-            type = "kernel";
-            key = "kernel";
-          }
+          "kernel"
           "uptime"
           "shell"
           {
