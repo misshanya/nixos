@@ -29,7 +29,7 @@ in
         layout = {
           gaps = 2;
 
-          center-focused-column = "on-overflow";
+          center-focused-column = "never";
 
           default-column-width = proportion 1.;
           preset-column-widths = [
