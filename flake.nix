@@ -31,6 +31,8 @@
       url = "github:LargeModGames/spotatui";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    niri.url = "github:sodiboo/niri-flake";
   };
 
   nixConfig = {
@@ -53,6 +55,7 @@
       vicinae,
       vicinae-extensions,
       dms,
+      niri,
       ...
     }@inputs:
     let
@@ -63,6 +66,7 @@
         inherit system;
         modules = [
           stylix.nixosModules.stylix
+          niri.nixosModules.niri
           ./hosts/laptop/system
         ];
       };
@@ -75,6 +79,7 @@
           stylix.homeModules.stylix
           vicinae.homeManagerModules.default
           dms.homeModules.dank-material-shell
+          niri.homeModules.config
           ./hosts/laptop/hm
         ];
       };

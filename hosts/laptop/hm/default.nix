@@ -34,6 +34,8 @@
       dms.enable = true;
       gtk.enable = true;
       qt.enable = true;
+
+      niri.enable = true;
     };
 
     shell = {

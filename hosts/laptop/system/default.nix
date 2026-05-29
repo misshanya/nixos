@@ -41,6 +41,7 @@
     apps.virt-manager.enable = true;
     apps.vscodium.enable = true;
 
+    graphics.niri.enable = true;
     graphics.hyprland.enable = true;
     graphics.gnome.enable = true;
 

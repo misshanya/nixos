@@ -12,5 +12,7 @@
     ./waybar.nix
 
     ./launchers
+
+    ./niri.nix
   ];
 }
