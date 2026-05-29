@@ -50,7 +50,7 @@
     bluetooth.enable = true;
     flatpak.enable = true;
     sound.enable = true;
-    sunshine.enable = true;
+    sunshine.enable = false;
   };
 
   my.server = {
