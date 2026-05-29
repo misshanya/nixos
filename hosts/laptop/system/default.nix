@@ -11,6 +11,7 @@
     ./nix.nix
     ./firewall.nix
     ./power.nix
+    ./amd.nix
 
     ../../../modules/nixos
   ];
