@@ -27,7 +27,7 @@ in
         };
 
         layout = {
-          gaps = 2;
+          gaps = 5;
 
           center-focused-column = "never";
 
