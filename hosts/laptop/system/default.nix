@@ -45,6 +45,7 @@
     graphics.niri.enable = true;
     graphics.hyprland.enable = true;
     graphics.gnome.enable = true;
+    graphics.dms-greet.enable = true;
 
     bluetooth.enable = true;
     flatpak.enable = true;
