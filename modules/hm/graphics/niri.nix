@@ -26,6 +26,19 @@ in
           keyboard.xkb.options = "grp:caps_toggle";
         };
 
+        window-rules = [
+          {
+            matches = [ ];
+            geometry-corner-radius = {
+              top-left = 8.;
+              top-right = 8.;
+              bottom-left = 8.;
+              bottom-right = 8.;
+            };
+            clip-to-geometry = true;
+          }
+        ];
+
         layout = {
           gaps = 5;
 
