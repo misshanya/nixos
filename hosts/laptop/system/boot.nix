@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   boot.kernel.sysctl = {
     "vm.swappiness" = 100;
@@ -7,4 +7,5 @@
     "vm.oom_kill_allocating_task" = 1;
     "vm.vfs_cache_pressure" = 50;
   };
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 }

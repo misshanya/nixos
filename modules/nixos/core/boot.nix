@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   boot.loader.systemd-boot.enable = true;
@@ -7,7 +7,7 @@
   boot.plymouth.enable = true;
   stylix.targets.plymouth.enable = true;
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = lib.mkDefault pkgs.linuxPackages_latest;
 
   boot.kernelParams = [
     "quiet"
