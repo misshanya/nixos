@@ -56,7 +56,10 @@
   my.server = {
     openssh.enable = true;
 
-    docker.enable = true;
+    docker = {
+      enable = true;
+      addUserToDockerGroup = true;
+    };
     podman.enable = true;
   };
 
