@@ -15,6 +15,8 @@ in
 
   config = lib.mkIf cfg.enable {
     programs.niri = {
+      package = pkgs.niri;
+
       settings = {
         prefer-no-csd = true;
         screenshot-path = null;
@@ -297,6 +299,21 @@ in
           "Mod+Shift+P".action.power-off-monitors = [ ];
         };
       };
+    };
+
+    xdg.configFile = {
+      niri-config-dms.target = lib.mkForce "niri/dms.kdl";
+      "niri/config.kdl".text =
+        # kdl
+        ''
+          include "dms.kdl"
+
+          window-rule {
+            background-effect {
+              blur true
+            }
+          }
+        '';
     };
 
     home.packages = with pkgs; [

@@ -1,9 +1,18 @@
-{ config, lib, ... }:
+{
+  config,
+  lib,
+  inputs,
+  ...
+}:
 
 let
   cfg = config.my.home.graphics.dms;
 in
 {
+  imports = [
+    inputs.dms.homeModules.dank-material-shell
+    inputs.dms.homeModules.niri
+  ];
   options.my.home.graphics.dms.enable = lib.mkEnableOption "Dank Material Shell";
 
   config = lib.mkIf cfg.enable {
@@ -15,19 +24,27 @@ in
         restartIfChanged = true;
       };
 
+      niri.includes = {
+        enable = true;
+        override = false;
+
+        filesToInclude = [
+          "colors"
+        ];
+      };
+
       enableSystemMonitoring = true;
 
-      # todo: remove full config and leave only needed settings
-      settings = {
-        currentThemeName = lib.mkForce "dynamic";
-        widgetBackgroundColor = lib.mkForce "s";
-        widgetColorMode = lib.mkForce "colorful";
-        cornerRadius = lib.mkForce 12;
-        animationSpeed = lib.mkForce 2;
-        showWorkspaceIndex = lib.mkForce true;
+      settings = lib.mkForce {
+        currentThemeName = "dynamic";
+        widgetBackgroundColor = "s";
+        widgetColorMode = "colorful";
+        cornerRadius = 12;
+        animationSpeed = 2;
+        showWorkspaceIndex = true;
 
-        showSeconds = lib.mkForce true;
-        osdAlwaysShowValue = lib.mkForce true;
+        showSeconds = true;
+        osdAlwaysShowValue = true;
 
         controlCenterWidgets = lib.mkForce [
           {
@@ -39,7 +56,6 @@ in
             id = "brightnessSlider";
             enabled = true;
             width = 50;
-            deviceName = "backlight:amdgpu_bl1";
           }
           {
             id = "wifi";
@@ -73,17 +89,16 @@ in
           }
         ];
 
-        networkPreference = lib.mkForce "wifi";
-        launcherLogoMode = lib.mkForce "os";
-        monoFontFamily = lib.mkForce "JetBrainsMonoNL Nerd Font Mono";
-        soundVolumeChanged = lib.mkForce false;
-        notificationPopupPosition = lib.mkForce 2;
-        acMonitorTimeout = lib.mkForce 600;
-        acLockTimeout = lib.mkForce 180;
-        batteryMonitorTimeout = lib.mkForce 300;
-        batteryLockTimeout = lib.mkForce 180;
+        launcherLogoMode = "os";
+        monoFontFamily = "Maple Mono Nerd Font";
+        soundVolumeChanged = true;
+        notificationPopupPosition = 2;
+        acMonitorTimeout = 600;
+        acLockTimeout = 180;
+        batteryMonitorTimeout = 300;
+        batteryLockTimeout = 180;
 
-        barConfigs = lib.mkForce [
+        barConfigs = [
           {
             id = "default";
             name = "Main Bar";
@@ -165,80 +180,6 @@ in
             popupGapsAuto = true;
             popupGapsManual = 4;
             maximizeDetection = true;
-          }
-        ];
-
-        desktopWidgetInstances = lib.mkForce [
-          {
-            id = "dw_1772106915968_ivviqgog7";
-            widgetType = "desktopClock";
-            name = "Desktop Clock";
-            enabled = true;
-            config = {
-              style = "analog";
-              transparency = 1.0;
-              colorMode = "primary";
-              customColor = "#ffffff";
-              showDate = false;
-              showAnalogNumbers = true;
-              showAnalogSeconds = true;
-              displayPreferences = [ "all" ];
-            };
-            positions = {
-              eDP-1 = {
-                width = 200;
-                height = 200;
-                x = 0;
-                y = 40.703125;
-              };
-              HDMI-A-1 = {
-                width = 200;
-                height = 200;
-                x = 1820;
-                y = 980;
-              };
-            };
-          }
-          {
-            id = "dw_1772107486788_zxiq2k3j7";
-            widgetType = "systemMonitor";
-            name = "System Monitor";
-            enabled = true;
-            config = {
-              showHeader = true;
-              transparency = 0.8;
-              colorMode = "primary";
-              customColor = "#ffffff";
-              showCpu = true;
-              showCpuGraph = true;
-              showCpuTemp = true;
-              showGpuTemp = false;
-              showMemory = true;
-              showMemoryGraph = true;
-              showNetwork = true;
-              showNetworkGraph = true;
-              showDisk = true;
-              showTopProcesses = false;
-              topProcessCount = 3;
-              topProcessSortBy = "cpu";
-              layoutMode = "auto";
-              graphInterval = 60;
-              displayPreferences = [ "all" ];
-            };
-            positions = {
-              eDP-1 = {
-                width = 160;
-                height = 382.84375;
-                x = 16.171875;
-                y = 253.5078125;
-              };
-              HDMI-A-1 = {
-                width = 320;
-                height = 480;
-                x = 1760;
-                y = 840;
-              };
-            };
           }
         ];
       };

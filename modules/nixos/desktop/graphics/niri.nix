@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 
@@ -12,5 +13,6 @@ in
 
   config = lib.mkIf cfg.enable {
     programs.niri.enable = true;
+    programs.niri.package = pkgs.niri;
   };
 }
