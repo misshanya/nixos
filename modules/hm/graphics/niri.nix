@@ -80,7 +80,7 @@ in
 
           "Mod+V".action.spawn = [
             "vicinae"
-            "vicinae://extensions/vicinae/clipboard/history"
+            "vicinae://launch/clipboard/history"
           ];
 
           "XF86AudioRaiseVolume".action.spawn = [
