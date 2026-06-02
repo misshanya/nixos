@@ -35,6 +35,8 @@ in
           csd = true;
           rounding = 5;
         };
+
+        launcher_window.opacity = lib.mkForce 0.85;
       };
 
       extensions = with vicinae-pkgs; [
