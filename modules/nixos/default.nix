@@ -18,6 +18,6 @@
     ./virtualisation.nix
     ./yggdrasil.nix
 
-    ../stylix.nix
+    ./stylix.nix
   ];
 }
