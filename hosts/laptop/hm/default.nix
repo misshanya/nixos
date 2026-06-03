@@ -53,6 +53,8 @@
     };
   };
 
+  programs.niri.settings.outputs."eDP-1".scale = 1.25;
+
   home = {
     username = "mishanya";
     homeDirectory = "/home/mishanya";
