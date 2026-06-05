@@ -36,18 +36,8 @@
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  };
 
-  nixConfig = {
-    extra-substituters = [
-      "https://vicinae.cachix.org"
-      "https://nix-community.cachix.org"
-    ];
-
-    extra-trusted-public-keys = [
-      "vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc="
-      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-    ];
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
   };
 
   outputs =
@@ -59,6 +49,7 @@
       vicinae-extensions,
       dms,
       niri,
+      nix-cachyos-kernel,
       ...
     }@inputs:
     let
@@ -68,6 +59,16 @@
       nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
+          # overlays
+          (
+            { pkgs, ... }:
+            {
+              nixpkgs.overlays = [
+                nix-cachyos-kernel.overlays.default
+              ];
+            }
+          )
+
           stylix.nixosModules.stylix
           niri.nixosModules.niri
           ./hosts/laptop/system
