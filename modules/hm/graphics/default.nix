@@ -2,6 +2,8 @@
 
 {
   imports = [
+    ./wayland.nix
+
     ./cliphist.nix
     ./mako.nix
 

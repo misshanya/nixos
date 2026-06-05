@@ -35,6 +35,7 @@
       gtk.enable = true;
       qt.enable = true;
 
+      wayland.enable = true;
       niri.enable = true;
     };
 
