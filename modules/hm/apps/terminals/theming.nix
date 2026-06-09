@@ -8,6 +8,6 @@ in
     lib.mkEnableOption "Theming of terminals via stylix";
 
   config = lib.mkIf cfg.enable {
-    stylix.opacity.terminal = 0.85;
+    stylix.opacity.terminal = 0.65;
   };
 }
