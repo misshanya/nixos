@@ -47,6 +47,7 @@
 
     dev = {
       enable = true;
+      android.enable = true;
       nix.enable = true;
       go.enable = true;
       rust.enable = true;
