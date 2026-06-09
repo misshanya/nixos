@@ -52,6 +52,10 @@
       rust.enable = true;
       ts.enable = true;
     };
+
+    server = {
+      ollama.enable = true;
+    };
   };
 
   programs.niri.settings.outputs."eDP-1".scale = 1.25;

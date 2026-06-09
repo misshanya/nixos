@@ -6,6 +6,7 @@
     ./graphics
     ./shell
     ./dev
+    ./server
 
     ./fastfetch.nix
     ./nettools.nix
