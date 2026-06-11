@@ -9,7 +9,7 @@ in
   config = lib.mkIf cfg.enable {
     services.earlyoom = {
       enable = true;
-      freeMemThreshold = 15;
+      freeMemThreshold = 5;
       freeSwapThreshold = 100;
       enableNotifications = true;
     };
