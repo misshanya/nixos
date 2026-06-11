@@ -1,18 +1,19 @@
 { ... }:
 
 {
-  # swapDevices = [
-  #   {
-  #     device = "/var/lib/swapfile";
-  #     size = 8 * 1024;
-  #     randomEncryption.enable = true;
-  #   }
-  # ];
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 8 * 1024;
+      randomEncryption.enable = true;
+      priority = 0;
+    }
+  ];
 
   zramSwap = {
     enable = true;
-    algorithm = "lz4";
-    memoryPercent = 150;
+    algorithm = "zstd";
+    memoryPercent = 100;
     priority = 100;
   };
 }
