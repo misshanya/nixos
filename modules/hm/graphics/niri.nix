@@ -146,6 +146,10 @@ in
             action.toggle-overview = [ ];
             repeat = false;
           };
+          "Mod+P" = {
+            action.toggle-overview = [ ];
+            repeat = false;
+          };
           "Mod+Q" = {
             action.close-window = [ ];
             repeat = false;
