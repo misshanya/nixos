@@ -18,7 +18,6 @@ in
 
     gtk = {
       enable = true;
-      gtk4.theme = null;
     };
 
     stylix.targets.gtk.enable = true;
