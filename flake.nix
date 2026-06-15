@@ -103,6 +103,7 @@
         modules = [
           stylix.homeModules.stylix
           vicinae.homeManagerModules.default
+          niri.homeModules.config
           ./hosts/homepc/hm
         ];
       };

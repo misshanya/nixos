@@ -1,12 +1,11 @@
-{ pkgs, config, ... }:
+{ pkgs, config, lib, ... }:
 
-let
-  nodejs = pkgs.nodejs_25;
-in
 {
   imports = [
     ../../../modules/hm
   ];
+  
+  stylix.enable = lib.mkForce false;
 
   home.username = "mishanya";
   home.homeDirectory = "/home/mishanya";
@@ -30,7 +29,7 @@ in
     grpcurl
   ];
 
-  home.sessionVariables.PATH = "${config.home.homeDirectory}/.npm-global/bin:$PATH";
+  home.sessionVariables.PATH = "${config.home.homeDirectory}/go/bin:${config.home.homeDirectory}/.npm-global/bin:$PATH";
   home.sessionVariables.KUBECONFIG = "${config.home.homeDirectory}/.kube/config";
 
   services.vicinae.settings.launcher_window.opacity = 1;
