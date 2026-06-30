@@ -16,7 +16,7 @@ in
   options.my.home.graphics.launchers.vicinae.enable = lib.mkEnableOption "Vicinae launcher";
 
   config = lib.mkIf cfg.enable {
-    services.vicinae = {
+    programs.vicinae = {
       enable = true;
 
       systemd = {
