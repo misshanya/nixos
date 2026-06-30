@@ -14,5 +14,6 @@
     nh
     bat
     ripgrep
+    _7zz
   ];
 }
