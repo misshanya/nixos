@@ -15,6 +15,11 @@
 
       CPU_BOOST_ON_AC = 1;
       CPU_BOOST_ON_BAT = 0;
+
+      RUNTIME_PM_ON_BAT = "auto";
+      PCIE_ASPM_ON_BAT = "powersaves";
+      USB_AUTOSUSPEND = 1;
+      SOUND_LPM_ON_BAT = "TRUE";
     };
   };
 
