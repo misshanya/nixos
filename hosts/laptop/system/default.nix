@@ -62,6 +62,8 @@
       addUserToDockerGroup = true;
     };
     podman.enable = true;
+
+    netbird.enable = true;
   };
 
   networking.hostName = "laptop";

@@ -6,5 +6,6 @@
     ./k3s.nix
     ./openssh.nix
     ./podman.nix
+    ./netbird.nix
   ];
 }
