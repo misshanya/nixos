@@ -8,5 +8,10 @@ in
 
   config = lib.mkIf cfg.enable {
     services.netbird.enable = true;
+    services.netbird.clients.wt0 = {
+      port = 51821;
+      openFirewall = true;
+      openInternalFirewall = true;
+    };
   };
 }
