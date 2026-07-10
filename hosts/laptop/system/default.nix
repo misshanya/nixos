@@ -52,6 +52,8 @@
     flatpak.enable = true;
     sound.enable = true;
     sunshine.enable = false;
+
+    lan-mouse.enable = true;
   };
 
   my.server = {
