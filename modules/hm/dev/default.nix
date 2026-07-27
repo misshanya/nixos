@@ -28,6 +28,9 @@ in
       postgresql
       onefetch
       wrk
+
+      kubernetes-helm
+      kubeseal
     ];
   };
 }
