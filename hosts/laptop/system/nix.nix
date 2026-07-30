@@ -3,7 +3,7 @@
   nix.distributedBuilds = true;
   nix.buildMachines = [
     {
-      hostName = "192.168.2.128";
+      hostName = "100.96.10.1";
       system = "x86_64-linux";
       sshUser = "mishanya";
       sshKey = "/home/mishanya/.ssh/id_ed25519";
