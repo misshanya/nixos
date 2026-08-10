@@ -42,6 +42,11 @@ in
         cornerRadius = 12;
         animationSpeed = 2;
         showWorkspaceIndex = true;
+        blurEnabled = true;
+        popupTransparency = 0.35;
+        floatingWindowForegroundLayers = false;
+        floatingWindowTransparency = 0.65;
+        foregroundLayerTransparency = 0.35;
 
         showSeconds = true;
         osdAlwaysShowValue = true;
@@ -157,8 +162,8 @@ in
             spacing = 0;
             innerPadding = 4;
             bottomGap = 0;
-            transparency = 1.0;
-            widgetTransparency = 1.0;
+            transparency = 0.25;
+            widgetTransparency = 0;
             squareCorners = true;
             noBackground = false;
             gothCornersEnabled = false;
