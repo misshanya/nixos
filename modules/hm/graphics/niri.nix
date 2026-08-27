@@ -317,6 +317,15 @@ in
               blur true
             }
           }
+
+          layer-rule {
+            match layer="top"
+            match layer="overlay"
+
+            background-effect {
+                xray false
+            }
+          }
         '';
     };
 
