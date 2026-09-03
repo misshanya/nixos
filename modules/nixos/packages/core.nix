@@ -16,6 +16,8 @@ in
       lm_sensors
       smartmontools
       yazi
+      file
+      screen
     ];
   };
 }
