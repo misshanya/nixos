@@ -16,6 +16,7 @@ in
       go
       python314
       jdk25
+      gnumake
     ];
     programs.nix-ld.enable = true;
   };
