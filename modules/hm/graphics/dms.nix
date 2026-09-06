@@ -51,6 +51,17 @@ in
         showSeconds = true;
         osdAlwaysShowValue = true;
 
+        showDock = true;
+        dockAutoHide = true;
+        dockSmartAutoHide = true;
+        dockGroupByApp = true;
+        dockSeparatePinnedAndRunningApps = true;
+        dockOpenOnPreview = true;
+        dockTransparency = 0.35;
+        dockIconSize = 34;
+        dockMargin = 3;
+        dockIndicatorStyle = "line";
+
         controlCenterWidgets = lib.mkForce [
           {
             id = "volumeSlider";
