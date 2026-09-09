@@ -23,6 +23,8 @@
       terminals.theming.enable = true;
       terminals.alacritty.enable = true;
 
+      sound.mixxx.enable = true;
+
       spotify-tui.enable = true;
       qbittorrent.enable = true;
     };
