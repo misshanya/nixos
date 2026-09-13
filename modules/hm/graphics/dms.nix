@@ -125,7 +125,6 @@ in
             leftWidgets = [
               "launcherButton"
               "workspaceSwitcher"
-              "focusedWindow"
               {
                 id = "systemTray";
                 enabled = true;
