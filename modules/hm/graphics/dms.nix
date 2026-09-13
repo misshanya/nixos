@@ -125,18 +125,9 @@ in
             leftWidgets = [
               "launcherButton"
               "workspaceSwitcher"
-              {
-                id = "systemTray";
-                enabled = true;
-              }
-              {
-                id = "notificationButton";
-                enabled = true;
-              }
-              {
-                id = "clipboard";
-                enabled = true;
-              }
+              "systemTray"
+              "notificationButton"
+              "clipboard"
             ];
             centerWidgets = [
               "music"
@@ -144,30 +135,12 @@ in
               "weather"
             ];
             rightWidgets = [
-              {
-                id = "keyboard_layout_name";
-                enabled = true;
-              }
-              {
-                id = "cpuUsage";
-                enabled = true;
-              }
-              {
-                id = "cpuTemp";
-                enabled = true;
-              }
-              {
-                id = "memUsage";
-                enabled = true;
-              }
-              {
-                id = "battery";
-                enabled = true;
-              }
-              {
-                id = "controlCenterButton";
-                enabled = true;
-              }
+              "keyboard_layout_name"
+              "cpuUsage"
+              "cpuTemp"
+              "memUsage"
+              "battery"
+              "controlCenterButton"
             ];
             spacing = 0;
             innerPadding = 4;
