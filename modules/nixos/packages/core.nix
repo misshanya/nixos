@@ -18,6 +18,7 @@ in
       yazi
       file
       screen
+      ncdu
     ];
   };
 }
