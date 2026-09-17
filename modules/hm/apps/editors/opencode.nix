@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 
@@ -12,8 +13,8 @@ in
   options.my.home.apps.editors.opencode.enable = lib.mkEnableOption "Opencode";
 
   config = lib.mkIf cfg.enable {
-    home.packages = with pkgs; [
-      opencode
+    home.packages = [
+      inputs.nixpkgs-opencode.legacyPackages.${pkgs.system}.opencode
     ];
   };
 }

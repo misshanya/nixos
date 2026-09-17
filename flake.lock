@@ -464,6 +464,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-opencode": {
+      "locked": {
+        "lastModified": 1788711913,
+        "narHash": "sha256-uarAE0PgVJQ8Hc3pIINdfRuif8ATdMnMiju1pEJkmrc=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "d91a239ca0118ff10ee22ba54f48929c38ab8114",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "d91a239ca0118ff10ee22ba54f48929c38ab8114",
+        "type": "github"
+      }
+    },
     "nixpkgs-stable": {
       "locked": {
         "lastModified": 1782847189,
@@ -583,6 +599,7 @@
         "niri": "niri",
         "nix-cachyos-kernel": "nix-cachyos-kernel",
         "nixpkgs": "nixpkgs_2",
+        "nixpkgs-opencode": "nixpkgs-opencode",
         "spotatui": "spotatui",
         "stylix": "stylix",
         "vicinae": "vicinae",
