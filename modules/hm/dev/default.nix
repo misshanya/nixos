@@ -32,6 +32,8 @@ in
 
       kubernetes-helm
       kubeseal
+
+      zellij
     ];
   };
 }
