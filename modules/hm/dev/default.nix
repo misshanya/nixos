@@ -15,6 +15,7 @@ in
     ./rust.nix
     ./ts.nix
     ./android.nix
+    ./zig.nix
   ];
 
   options.my.home.dev.enable = lib.mkEnableOption "Generic dev tools";

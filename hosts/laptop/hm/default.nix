@@ -54,6 +54,7 @@
       go.enable = true;
       rust.enable = true;
       ts.enable = true;
+      zig.enable = true;
     };
 
     server = {
