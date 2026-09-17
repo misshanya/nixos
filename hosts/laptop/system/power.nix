@@ -29,7 +29,7 @@
       RADEON_DPM_PERF_LEVEL_ON_SAV = "low";
       AMDGPU_ABM_LEVEL_ON_SAV = 2;
 
-      USB_AUTOSUSPEND = 1;
+      USB_AUTOSUSPEND = 0;
     };
   };
 
