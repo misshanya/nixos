@@ -34,6 +34,8 @@ in
       kubeseal
 
       zellij
+
+      clangStdenv
     ];
   };
 }
