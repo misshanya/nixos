@@ -55,7 +55,7 @@ in
         dockAutoHide = true;
         dockSmartAutoHide = true;
         dockGroupByApp = true;
-        dockSeparatePinnedAndRunningApps = true;
+        dockSeparatePinnedAndRunningApps = false;
         dockOpenOnPreview = true;
         dockTransparency = 0.35;
         dockIconSize = 34;
