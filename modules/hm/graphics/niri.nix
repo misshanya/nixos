@@ -24,8 +24,7 @@ in
         animations.slowdown = 0.7;
 
         input = {
-          keyboard.xkb.layout = "us,us,ru";
-          keyboard.xkb.variant = ",colemak_dh,";
+          keyboard.xkb.layout = "us,ru";
           keyboard.xkb.options = "grp:caps_toggle";
         };
 
