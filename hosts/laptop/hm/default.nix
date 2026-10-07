@@ -27,6 +27,7 @@
 
       spotify-tui.enable = true;
       qbittorrent.enable = true;
+      mattermost.enable = true;
     };
 
     graphics = {

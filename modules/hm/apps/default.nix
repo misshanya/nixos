@@ -8,5 +8,6 @@
 
     ./spotify_tui.nix
     ./qbittorrent.nix
+    ./mattermost.nix
   ];
 }
