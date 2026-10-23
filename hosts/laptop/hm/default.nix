@@ -115,6 +115,9 @@
       usbutils
 
       inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
+      inputs.claude-desktop.packages.${pkgs.stdenv.hostPlatform.system}.default
+
+      claude-code
     ];
   };
 

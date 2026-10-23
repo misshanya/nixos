@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-opencode.url = "github:nixos/nixpkgs/d91a239ca0118ff10ee22ba54f48929c38ab8114";
+    nixpkgs-claude-code.url = "github:nixos/nixpkgs/55bfb4d7437bd4e09ab7cba58a43bd68eb310044";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -39,6 +40,8 @@
     };
 
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+
+    claude-desktop.url = "github:tomsch/claude-desktop-nix";
   };
 
   outputs =
