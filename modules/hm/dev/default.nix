@@ -36,6 +36,9 @@ in
       zellij
 
       clangStdenv
+      binwalk
+      imhex
+      ghidra
     ];
   };
 }

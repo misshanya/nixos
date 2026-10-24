@@ -39,7 +39,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+    # nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
 
     claude-desktop.url = "github:tomsch/claude-desktop-nix";
   };
@@ -53,7 +53,7 @@
       vicinae-extensions,
       dms,
       niri,
-      nix-cachyos-kernel,
+      # nix-cachyos-kernel,
       ...
     }@inputs:
     let
@@ -64,14 +64,14 @@
         inherit system;
         modules = [
           # overlays
-          (
-            { pkgs, ... }:
-            {
-              nixpkgs.overlays = [
-                nix-cachyos-kernel.overlays.default
-              ];
-            }
-          )
+          # (
+          #   { pkgs, ... }:
+          #   {
+          #     nixpkgs.overlays = [
+          #       nix-cachyos-kernel.overlays.default
+          #     ];
+          #   }
+          # )
 
           stylix.nixosModules.stylix
           niri.nixosModules.niri

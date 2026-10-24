@@ -121,6 +121,12 @@
     ];
   };
 
+  nixpkgs.overlays = [
+    (final: prev: {
+      khal = prev.khal.overrideAttrs { __structuredAttrs = false; };
+    })
+  ];
+
   news.display = "silent";
 
   # Let Home Manager install and manage itself.
