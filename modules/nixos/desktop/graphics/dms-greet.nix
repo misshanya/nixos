@@ -11,7 +11,7 @@ in
   options.my.desktop.graphics.dms-greet.enable = lib.mkEnableOption "DankGreet";
 
   config = lib.mkIf cfg.enable {
-    services.displayManager.dms-greeter = {
+    services.displayManager.dux-greeter = {
       enable = true;
       compositor.name = lib.mkDefault "niri";
     };
