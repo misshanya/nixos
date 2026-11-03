@@ -12,6 +12,7 @@
     ./firewall.nix
     ./power.nix
     ./amd.nix
+    ./fingerprint.nix
 
     ../../../modules/nixos
   ];
