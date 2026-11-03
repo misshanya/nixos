@@ -16,6 +16,9 @@ in
   options.my.home.graphics.dms.enable = lib.mkEnableOption "Dank Material Shell";
 
   config = lib.mkIf cfg.enable {
+    # settings live in ~/.config/dms/settings.json, owned by DMS itself
+    stylix.targets.dank-material-shell.enable = false;
+
     programs.dank-material-shell = {
       enable = true;
 
@@ -34,143 +37,6 @@ in
       };
 
       enableSystemMonitoring = true;
-
-      settings = lib.mkForce {
-        currentThemeName = "dynamic";
-        widgetBackgroundColor = "s";
-        widgetColorMode = "colorful";
-        cornerRadius = 12;
-        animationSpeed = 2;
-        showWorkspaceIndex = true;
-        blurEnabled = true;
-        popupTransparency = 0.35;
-        floatingWindowForegroundLayers = false;
-        floatingWindowTransparency = 0.65;
-        foregroundLayerTransparency = 0.35;
-
-        showSeconds = true;
-        osdAlwaysShowValue = true;
-
-        showDock = true;
-        dockAutoHide = true;
-        dockSmartAutoHide = true;
-        dockGroupByApp = true;
-        dockSeparatePinnedAndRunningApps = false;
-        dockOpenOnPreview = true;
-        dockTransparency = 0.35;
-        dockIconSize = 34;
-        dockMargin = 3;
-        dockIndicatorStyle = "line";
-
-        controlCenterWidgets = lib.mkForce [
-          {
-            id = "volumeSlider";
-            enabled = true;
-            width = 50;
-          }
-          {
-            id = "brightnessSlider";
-            enabled = true;
-            width = 50;
-          }
-          {
-            id = "wifi";
-            enabled = true;
-            width = 50;
-          }
-          {
-            id = "bluetooth";
-            enabled = true;
-            width = 50;
-          }
-          {
-            id = "audioOutput";
-            enabled = true;
-            width = 50;
-          }
-          {
-            id = "audioInput";
-            enabled = true;
-            width = 50;
-          }
-          {
-            id = "nightMode";
-            enabled = true;
-            width = 50;
-          }
-          {
-            id = "darkMode";
-            enabled = true;
-            width = 50;
-          }
-        ];
-
-        launcherLogoMode = "os";
-        monoFontFamily = "Maple Mono Nerd Font";
-        soundVolumeChanged = true;
-        notificationPopupPosition = 2;
-        acMonitorTimeout = 600;
-        acLockTimeout = 180;
-        batteryMonitorTimeout = 300;
-        batteryLockTimeout = 180;
-
-        barConfigs = [
-          {
-            id = "default";
-            name = "Main Bar";
-            enabled = true;
-            position = 0;
-            screenPreferences = [ "all" ];
-            showOnLastDisplay = true;
-            leftWidgets = [
-              "launcherButton"
-              "workspaceSwitcher"
-              "systemTray"
-              "notificationButton"
-              "clipboard"
-            ];
-            centerWidgets = [
-              "music"
-              "clock"
-              "weather"
-            ];
-            rightWidgets = [
-              "keyboard_layout_name"
-              "cpuUsage"
-              "cpuTemp"
-              "memUsage"
-              "battery"
-              "controlCenterButton"
-            ];
-            spacing = 0;
-            innerPadding = 4;
-            bottomGap = 0;
-            transparency = 0.25;
-            widgetTransparency = 0;
-            squareCorners = true;
-            noBackground = false;
-            gothCornersEnabled = false;
-            gothCornerRadiusOverride = false;
-            gothCornerRadiusValue = 12;
-            borderEnabled = false;
-            borderColor = "surfaceText";
-            borderOpacity = 1.0;
-            borderThickness = 1;
-            widgetOutlineEnabled = false;
-            widgetOutlineColor = "surfaceText";
-            widgetOutlineOpacity = 0.53;
-            widgetOutlineThickness = 2;
-            fontScale = 1.0;
-            autoHide = false;
-            autoHideDelay = 250;
-            openOnOverview = false;
-            visible = true;
-            popupGapsAuto = true;
-            popupGapsManual = 4;
-            maximizeDetection = true;
-          }
-        ];
-      };
     };
   };
 }
