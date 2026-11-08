@@ -31,4 +31,21 @@ in
   # DMS lockscreen runs its own pam_fprintd session (enableFprint in its settings),
   # so this stack must stay password-only or both sessions fight over the reader
   security.pam.services.dankshell.fprintAuth = false;
+
+  # the goodix driver spins on USB errors and ignores SIGTERM once the sensor
+  # drops off the bus, so don't wait the default 90s before SIGKILL
+  systemd.services.fprintd.serviceConfig.TimeoutStopSec = 5;
+
+  # the sensor re-enumerates on suspend and fprintd keeps the stale USB handle;
+  # stopping it before sleep lets D-Bus activate a fresh one on wake (restarting
+  # after resume races with the dms lockscreen, which only tries once)
+  systemd.services.fprintd-sleep = {
+    description = "Stop fprintd before sleep";
+    wantedBy = [ "sleep.target" ];
+    before = [ "sleep.target" ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.systemd}/bin/systemctl stop fprintd.service";
+    };
+  };
 }
